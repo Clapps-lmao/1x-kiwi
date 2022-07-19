@@ -47,7 +47,7 @@ body {
 	color: #00ff26;
 	text-align: center;
 	font-size: 155px;
-	margin: 287px 800px;
+	margin: 287px 740px;
 }
 
 
@@ -108,7 +108,17 @@ letter-spacing: 5px;
 <div class="div-twitch">
 <h2 class="twitch-header">Twitch</h2>
 
- <iframe src="https://player.twitch.tv/?channel=kiwigodx__&parent=https://clapps-lmao.github.io/1x-kiwi" frameborder="0" allowfullscreen="false" scrolling="no" height="100%" width="100%"></iframe>
+  <div id="twitch-embed"></div>
+            <script src="https://embed.twitch.tv/embed/v1.js"></script>
+            <script type="text/javascript">
+              new Twitch.Embed("twitch-embed", {
+                width: '100%',
+                height: '100%',
+                channel: "kiwigodx__",
+                layout: 'video', 
+                parent: ["https://clapps-lmao.github.io/1x-kiwi/"]
+              });
+            </script></div>
 
 </div>
 
