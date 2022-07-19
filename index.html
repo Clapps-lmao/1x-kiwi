@@ -4,9 +4,27 @@
 <head>
 	<title>1x.Kiwi</title>
 	<link href="http://fonts.cdnfonts.com/css/zx-spectrum-7" rel="stylesheet">
-   <style>body {-ms-overflow-style: none;overflow: -moz-scrollbars-none;overflow-x: hidden}body::-webkit-scrollbar {display: none; }</style>             
+   <style>body {-ms-overflow-style: none;overflow: -moz-scrollbars-none;overflow-x: hidden}body::-webkit-scrollbar {display: none; }</style>     
+
+   <!-- jQuery -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+   $(window).load(function() {
+   $(".preloader").delay(5000).fadeOut("slow");
+   $("#overlayer").delay(5000).fadeOut("slow");
+   })
+</script>        
                 
-                
+      
+
+      	<div id="overlayer">
+      	<img src="kiwi.png" class="kiwi-preload">
+      	</div>
+<div class="preloader">
+   <div class="loader">
+      <span class="loader-inner"></span>
+   </div>
+</div>          
 
 
 </head>
@@ -29,15 +47,68 @@
 body {
 	display: flex;
 	align-content: center;
-	background: black;
+	background: #24005B;
 
+}
+
+#overlayer {
+  width:100%;
+  height:100%;  
+  position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  z-index: 2;
+  align-content: center;
+  background: black;
+}
+
+.kiwi-preload {
+
+	width: 150px;
+	height: 150px;
+	margin: 350px 745px;
+	align-content: center;
+	vertical-align: middle;
+}
+
+.preloader {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    margin-left: -45px;
+    width: 300px;
+    height: 300px;
+    align-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    z-index: 3;
+}
+
+.loader-inner {
+	align-content: center;
+  vertical-align: top;
+  width: 100%;
+  background-color: #fff;
+}
+
+.loader {
+	align-content: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index:3;
+  top: 50%;
 }
 
 
 .top-landing {
 	height: 1096px;
-	background-color: black;
-
+	background-color: #24005B;
+	align-content: center;
+	background-repeat: no-repeat;
 }
 
 .h1-1 {
@@ -55,9 +126,18 @@ body {
 	margin: 1096px -2005px;
 	width: 2007px;
 	height: 1000px;
-	background-color: black;
+	background-color: #24005B;
 
 
+
+}
+
+.social-grid {
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
 
 }
 
@@ -66,7 +146,9 @@ body {
 
 color: white;
 font-family: 'ZX-Spectrum-7', sans-serif;
+font-size: 35px;
 letter-spacing: 5px;
+height: 50px;
 	width: 418px;
 	margin: 30px 0px;
 	padding-bottom: 13px;
@@ -82,10 +164,11 @@ letter-spacing: 5px;
 .div-twitch {
 
 	width: 418px;
-	height: 232px;
+	height: !important 275px;
 	margin: 110px 282px;
 	
 }
+
 
 
 
@@ -105,15 +188,16 @@ letter-spacing: 5px;
 
 <div class="bottom-socials-more">
 
+<div class="social-grid">
 <div class="div-twitch">
 <h2 class="twitch-header">Twitch</h2>
-
+<div class="twitch-player">
 <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
 <div id="kiwi-embed"></div>
 <script type="text/javascript">
   var options = {
     width: "100%",
-    height: "100%",
+    height: "230px",
     channel: "kiwigodx__",
     autoplay: "false",
     muted: "true",
@@ -121,7 +205,12 @@ letter-spacing: 5px;
   };
     var player = new Twitch.Player("kiwi-embed", options);
 </script>
+</div>
 
+
+
+
+</div>
 </div>
 
 
@@ -167,3 +256,4 @@ letter-spacing: 5px;
 
 
 </script>
+
