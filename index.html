@@ -3,6 +3,7 @@
 
 <head>
 	<title>1x.Kiwi</title>
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
 	<link href="http://fonts.cdnfonts.com/css/zx-spectrum-7" rel="stylesheet">
    <style>body {-ms-overflow-style: none;overflow: -moz-scrollbars-none;overflow-x: hidden}body::-webkit-scrollbar {display: none; }</style>     
 
@@ -10,8 +11,8 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script>
    $(window).load(function() {
-   $(".preloader").delay(5000).fadeOut("slow");
-   $("#overlayer").delay(5000).fadeOut("slow");
+   $(".preloader").delay(3000).fadeOut("slow");
+   $("#overlayer").delay(3000).fadeOut("slow");
    })
 </script>        
                 
@@ -42,16 +43,30 @@
     font-weight: 400;
     src: local('ZX-Spectrum7-Bold'), url('https://fonts.cdnfonts.com/s/27601/zx_spectrum-7_bold.woff') format('woff');
 }
+@font-face {
+    font-family: 'Gotham-Narrow';
+    font-style: normal;
+    font-weight: 350;
+    src: local('Gotham-Narrow'), url('https://fonts.cdnfonts.com/s/18578/GothamNarrow-Medium.woff') format('woff');
+}
 
 
 body {
 	display: flex;
+	justify-content: center;
 	align-content: center;
 	background: #24005B;
 
 }
 
+#wrapper {
+  width: 70%;     /* specify a width! */
+  margin: 0 auto; /* center */
+}
+
 #overlayer {
+	display: flex;
+	justify-content: center;
   width:100%;
   height:100%;  
   position:fixed;
@@ -65,7 +80,8 @@ body {
 }
 
 .kiwi-preload {
-
+	display: flex;
+	justify-content: center;
 	width: 150px;
 	height: 150px;
 	margin: 350px 745px;
@@ -74,6 +90,8 @@ body {
 }
 
 .preloader {
+		display: flex;
+	justify-content: center;
     position: absolute;
     top: 80%;
     left: 50%;
@@ -88,13 +106,16 @@ body {
 }
 
 .loader-inner {
+		display: flex;
+	justify-content: center;
 	align-content: center;
   vertical-align: top;
   width: 100%;
-  background-color: #fff;
-}
+  }
 
 .loader {
+		display: flex;
+	justify-content: center;
 	align-content: center;
   width: 30px;
   height: 30px;
@@ -105,28 +126,28 @@ body {
 
 
 .top-landing {
-	height: 1096px;
-	background-color: #24005B;
+	display: flex;
+	justify-content: center;
 	align-content: center;
+	height: 1096px;
+	background-color: #24005B;	
 	background-repeat: no-repeat;
 }
 
 .h1-1 {
-
 	font-family: 'ZX-Spectrum7-Bold', sans-serif;
+	padding: 50px 50px;
 	background: none;
 	color: #00ff26;
-	text-align: center;
 	font-size: 155px;
-	margin: 287px 740px;
 }
 
 
 .bottom-socials-more {
-	margin: 1096px -2005px;
-	width: 2007px;
-	height: 1000px;
-	background-color: #24005B;
+	margin: auto;
+	width: auto;
+	height: 1110px;
+	background: none;
 
 
 
@@ -135,9 +156,10 @@ body {
 .social-grid {
 
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	flex-direction: row;
+	flex-wrap: nowrap;
 	align-content: center;
+	justify-content: space-evenly;
 
 }
 
@@ -164,16 +186,97 @@ height: 50px;
 .div-twitch {
 
 	width: 418px;
-	height: !important 275px;
-	margin: 110px 282px;
 	
 }
 
+.twitter-header {
+
+color: white;
+font-family: 'ZX-Spectrum-7', sans-serif;
+font-size: 35px;
+letter-spacing: 5px;
+height: 50px;
+	width: 418px;
+	margin: 30px 0px;
+	padding-bottom: 13px;
+	border: solid;
+	border-color: #00ff66;
+	border-radius: 2px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+
+}
+
+.div-twitter {
+
+	width: 418px;
+	
+}
+
+.twitter-timeline-rendered {
+
+	width: !important 100%;
+	height: !important 100%;
+
+}
 
 
+.timeline-Widget {
+
+	width: !important 100%;
+	height: !important 100%;
+}
 
 
+.Social-Media-header {
 
+color: white;
+font-family: 'ZX-Spectrum-7', sans-serif;
+font-size: 35px;
+letter-spacing: 5px;
+height: 50px;
+	width: 420px;
+	margin: 30px 0px;
+	padding-bottom: 13px;
+	border: solid;
+	border-color: #00ff66;
+	border-radius: 2px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+
+}
+
+.Twitch-btn {
+
+	font-family: 'Gotham-Narrow', sans-serif;
+	padding: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	background: none;
+	color: #00ff66;
+	border: none;
+	transition-duration: 0.6s;
+
+
+}
+
+.Twitch-btn:hover {
+
+	color: white;
+	padding: 5px 5px;
+	font-size: 25px;
+}
+
+
+.link-box {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
 
 
 </style>
@@ -181,14 +284,50 @@ height: 50px;
 
 <body class="body" style="height: 2096px;">
 
+ <div id="wrapper">
 <div class="top-landing">
 	<h1 class="h1-1">KiwiGodX</h1>
 </div>
 
 
 <div class="bottom-socials-more">
+	<div class="social-grid">
 
-<div class="social-grid">
+<div class="social-media-links">
+<h2 class="Social-Media-header">Socials</h2>
+
+<div class="link-box">
+<div class="Twitch-Link">
+
+<a href="https://twitch.tv/kiwigodx__" target="_blank"> <button class="Twitch-btn" style=" display: inline-block; letter-spacing: 2px;">Twitch</button></a>
+
+<div class="Twitch-Link">
+<a href="https://open.spotify.com/user/7r2t6y4bbeej9ahazb6p40ea7" target="_blank"> <button class="Twitch-btn" style=" display: inline-block; letter-spacing: 2px; padding-top: 20px;">Spotify</button></a>
+</div>
+
+</div>
+
+
+<div class="Twitch-Link">
+<a href="https://twitter.com/KiwiGodX" target="_blank"> <button class="Twitch-btn" style=" display: inline-block; letter-spacing: 2px;">Twitter</button></a>
+
+
+</div>
+
+<div class="Twitch-Link">
+<a href="https://steamcommunity.com/profiles/76561198366580037" target="_blank"> <button class="Twitch-btn" style=" display: inline-block; letter-spacing: 2px;">Steam</button></a>
+
+</div>
+
+<div class="Twitch-Link">
+<a href="https://www.youtube.com/channel/UCv07naNsiZdhQ3BaHZxronA" target="_blank"> <button class="Twitch-btn" style=" display: inline-block; letter-spacing: 2px;">Youtube</button></a>
+
+</div>
+
+
+
+</div>
+
 <div class="div-twitch">
 <h2 class="twitch-header">Twitch</h2>
 <div class="twitch-player">
@@ -210,15 +349,26 @@ height: 50px;
 
 
 
-</div>
-</div>
-
-
 
 
 </div>
 
 
+
+</div>
+
+<div class="social-media-links">
+<h2 class="Social-Media-header">Other Links</h2>
+
+<div class="link-box">
+<div class="Twitch-Link">
+
+<a href="https://clapps-lmao.github.io/clapps/" target="_blank"> <button class="Twitch-btn" style=" display: inline-block; letter-spacing: 2px;">Clapps' Website</button></a>
+
+<div class="div-twitter">
+<h2 class="twitter-header" style="padding-top: 52px;">Lastest Tweets</h2>
+<a class="twitter-timeline" href="https://twitter.com/KiwiGodX?ref_src=twsrc%5Etfw">KiwiGodX</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 
 </body>
 
