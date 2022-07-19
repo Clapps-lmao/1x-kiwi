@@ -108,17 +108,19 @@ letter-spacing: 5px;
 <div class="div-twitch">
 <h2 class="twitch-header">Twitch</h2>
 
-  <div id="twitch-embed"></div>
-            <script src="https://embed.twitch.tv/embed/v1.js"></script>
-            <script type="text/javascript">
-              new Twitch.Embed("twitch-embed", {
-                width: '100%',
-                height: '100%',
-                channel: "kiwigodx__",
-                layout: 'video', 
-                parent: ["https://clapps-lmao.github.io/1x-kiwi/"]
-              });
-            </script></div>
+<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+<div id="kiwi-embed"></div>
+<script type="text/javascript">
+  var options = {
+    width: "100%",
+    height: "100%",
+    channel: "kiwigodx__",
+    autoplay: "false",
+    muted: "true"
+    parent: ["https://clapps-lmao.github.io/1x-kiwi/", "othersite.example.com"]
+  };
+    var player = new Twitch.Player("kiwi-embed", options);
+</script>
 
 </div>
 
